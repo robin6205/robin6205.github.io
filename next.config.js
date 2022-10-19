@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: "akamai",
-    path: "https://https://robin6205.github.io/",
+    path: "",
   },
   basePath: "/portfolio",
   assetPrefix: "/portfolio",
