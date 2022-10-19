@@ -121,29 +121,29 @@ export default function Home() {
                 Cam2 Forest Inventory Analysis Research
               </h3>
               <p className="py-2">
-                Research project focused on developing open-sourced flight
-                control systems for a swarm of drones. And a web application
-                that allows developers to build and test the algorithms with
-                easy-to-use tools in simulated environments
+                Research project focused on developing image recognition and
+                processing algorithms that calculate and analyze forestry data
+                by its size, species, shape, and other parameters.
               </p>
               <h4 className="py-4 text-teal-600">Software stack</h4>
-              <p className="text-gray-800 py-1">Unreal Engine</p>
-              <p className="text-gray-800 py-1">Airsim API (Python)</p>
-              <p className="text-gray-800 py-1">React</p>
+              <p className="text-gray-800 py-1">Tensorflow</p>
+              <p className="text-gray-800 py-1">RealSense SDK</p>
+              <p className="text-gray-800 py-1">Image processor (Python)</p>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-slate-100">
               <Image src={droneicon} width={200} height={200} />
               <h3 className="text-lg font-vcr pt-8 pb-2">Drone build</h3>
               <p className="py-2">
-                Research project focused on developing open-sourced flight
-                control systems for a swarm of drones. And a web application
-                that allows developers to build and test the algorithms with
-                easy-to-use tools in simulated environments
+                Project focused on building a drone from scratch. The drone is
+                controlled via wifi UDP packets and is capable of autonomous
+                flight. consists of Lidar, IMU, Pixhawk 4, and a Raspberry Pi 4.
               </p>
               <h4 className="py-4 text-teal-600">Software stack</h4>
-              <p className="text-gray-800 py-1">Unreal Engine</p>
-              <p className="text-gray-800 py-1">Airsim API (Python)</p>
-              <p className="text-gray-800 py-1">React</p>
+              <p className="text-gray-800 py-1">Mavlink protocol</p>
+              <p className="text-gray-800 py-1">Obstacle avoidance Algorithm</p>
+              <p className="text-gray-800 py-1">
+                Ground Control (Mission Planner)
+              </p>
             </div>
           </div>
         </section>
@@ -153,15 +153,15 @@ export default function Home() {
               Portfolio / Contact
             </h3>
             <p className="text-md py-2 leading-8 text-gray-700 dark:text-zinc-400">
-              List of personal projects and research I have worked on. My
-              <span className="text-teal-500"> research </span>
-              projects are open source and available on my github.
+              Feel free to reach me at
+              <span className="text-teal-500"> robin6205 @ gmail.com </span>
+              regarding any questions about my projects
             </p>
             <p className="text-md py-2 leading-8 text-gray-700 dark:text-zinc-400">
-              Software projects are developed with:
+              This website is powered by:
               <span className="text-teal-500">
                 {" "}
-                Python, C++, Javascript, etc.{" "}
+                Next.js, Tailwind.css and Github pages{" "}
               </span>
             </p>
           </div>
