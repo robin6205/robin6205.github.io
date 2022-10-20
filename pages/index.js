@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
+import { TbDrone } from "react-icons/tb";
 import Image from "next/image";
 import joshphoto from "../public/josh-research.jpg";
 import swarm from "../public/dronecapture.jpg";
@@ -72,7 +73,9 @@ export default function Home() {
             <a href="https://github.com/robin6205">
               <AiFillGithub />
             </a>
-            <AiFillYoutube />
+            <a href="https://www.swarmsim.io/">
+              <TbDrone />
+            </a>
           </div>
           {/* set max image size to 96 */}
           <div className="relative justify-center mx-auto mt-20 overflow-hidden min-w-1/2 max-w-xl max-h-50 ">
@@ -104,6 +107,14 @@ export default function Home() {
               <h3 className="text-lg font-vcr pt-8 pb-2">
                 SWARM Drone Flight Control Research Platform
               </h3>
+              {/* link to https://www.swarmsim.io/ */}
+              <h4
+                onClick={() => window.open("https://www.swarmsim.io/")}
+                className="py-4 text-teal-600 cursor-pointer"
+              >
+                https://www.swarmsim.io/
+              </h4>
+
               <p className="py-2">
                 Research project focused on developing open-sourced flight
                 control systems for a swarm of drones. And a web application
