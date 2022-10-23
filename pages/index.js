@@ -15,10 +15,26 @@ import pic5 from "../public/pic5.jpg";
 import pic6 from "../public/pic6.jpg";
 import pic7 from "../public/pic7.jpg";
 import pic8 from "../public/pic8.png";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+
+  // observer that shows each section when visible to observer
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add(".show");
+  //     } else {
+  //       entry.target.classList.remove(".show");
+  //     }
+  //   });
+  // });
+
+  // const hiddenElements = document.querySelectorAll(".hidden");
+  // hiddenElements.forEach((element) => observer.observe(element));
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -54,7 +70,20 @@ export default function Home() {
           </nav>
           <div className="text-center p-10">
             <h2 className="text-5xl py-2 text-teal-600 font-vcr md:text-6xl">
-              Joshua Chang
+              {/* Joshua Chang */}
+
+              <Typewriter
+                options={{
+                  loop: true,
+                }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Joshua Chang")
+                    .pauseFor(5000)
+                    .changeDeleteSpeed(30)
+                    .start();
+                }}
+              />
             </h2>
 
             <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
