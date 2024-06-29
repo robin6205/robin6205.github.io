@@ -4,10 +4,10 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: "akamai",
-    path: "",
+    path: "/", // Updated to valid path
   },
   basePath: "",
-  assetPrefix: "",
+  assetPrefix: "/", // Updated to valid prefix
 };
 
 module.exports = nextConfig;
