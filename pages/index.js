@@ -74,10 +74,10 @@ export default function Home() {
                     height="200"
                     src="https://www.youtube.com/embed/gmdaVOeZyiQ?si=uR0RlJ8-CvzITXTC"
                     title="YouTube video player"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
                   ></iframe>
                 </div>
                 <a href="https://www.fakeurl.com" target="_blank" rel="noopener noreferrer">
@@ -98,7 +98,7 @@ export default function Home() {
               <div className="project-box">
                 <h3>IEEE Drone Chase</h3>
                 <div className="thumbnail">
-                  <img src="https://via.placeholder.com/300x200" alt="IEEE Drone Chase" />
+                  <Image src="https://via.placeholder.com/300x200" alt="IEEE Drone Chase" layout="responsive" width={300} height={200} />
                 </div>
                 <a href="https://www.fakeurl.com" target="_blank" rel="noopener noreferrer">
                   Visit Project
@@ -148,7 +148,7 @@ export default function Home() {
           </section>
 
           <section id="quote" className="text-content quote-section fade">
-            <p className="quote">"Somewhere, something incredible is waiting to be known." — Carl Sagan</p>
+            <p className="quote">&quot;Somewhere, something incredible is waiting to be known.&quot; — Carl Sagan</p>
           </section>
         </div>
       </div>
