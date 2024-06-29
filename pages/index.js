@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import Spline from "@splinetool/react-spline";
+import Spline from '@splinetool/react-spline/next';
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { TbDrone } from "react-icons/tb";
 import { FiChevronDown } from "react-icons/fi";
