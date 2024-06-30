@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Spline from "@splinetool/react-spline";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { TbDrone } from "react-icons/tb";
@@ -9,10 +9,20 @@ import dronecapture from '../public/dronecapture.jpg'; // Importing the drone ca
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
+  const splineRef = useRef(null);
 
   const handleScroll = () => {
-    setScrollY(window.scrollY);
+    const scrollY = window.scrollY;
+
+    const spline = splineRef.current;
+    // Check if spline._children is defined before calling .find
+    if (spline._children && Array.isArray(spline._children)) {
+      const camera = spline._children.find((child) => child.isCamera);
+      if (camera) {
+        camera.position.y = scrollY / 100;
+        camera.position.z = 10 - scrollY / 200;
+      }
+    }
   };
 
   useEffect(() => {
@@ -55,6 +65,7 @@ export default function Home() {
 
       <div className="spline-background">
         <Spline
+          ref={splineRef}
           scene="https://prod.spline.design/01GXjdsOrrcMdFoh/scene.splinecode"
         />
       </div>
