@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
+// next.config.js
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
     loader: "akamai",
-    path: "/", // Updated to valid path
+    path: "/",
   },
-  basePath: "",
-  assetPrefix: "/", // Updated to valid prefix
+  staticPageGenerationTimeout: 120, // Increase the timeout to 2 minutes
 };
 
 module.exports = nextConfig;
